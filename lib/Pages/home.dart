@@ -4,28 +4,9 @@ import 'package:inter_agent_money_transaction_app/Core/Components/quickAccess.da
 import 'package:inter_agent_money_transaction_app/Core/Components/transaction.dart';
 import 'package:inter_agent_money_transaction_app/Core/Data/card.dart';
 import 'package:inter_agent_money_transaction_app/Core/Data/quick_access.dart';
-import 'package:inter_agent_money_transaction_app/Core/Data/transcation.dart';
+import 'package:inter_agent_money_transaction_app/Core/Data/transaction.dart';
 
-// void main() {
-//   runApp(const HomePage());
-// }
-
-// class HomePage extends StatelessWidget {
-//   const HomePage({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'Flutter Demo',
-//       theme: ThemeData(
-//         primarySwatch: Colors.blue,
-//         visualDensity: VisualDensity.adaptivePlatformDensity,
-//       ),
-//       home: const Home(title: 'Flutter Demo Home Page'),
-//     );
-//   }
-// }
-
+ 
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -67,7 +48,7 @@ class _HomeState extends State<Home> {
               Padding(
                 padding: const EdgeInsets.only(top: 10),
                 child: Text(
-                  'Joan Louji',
+                  'Festo Mugisha',
                   style: TextStyle(
                     fontSize: 35,
                     color: Colors.grey[800],
@@ -109,7 +90,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
               const Text(
-                'Transcation History',
+                'Transaction History',
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
               ListView.builder(

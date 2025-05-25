@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:inter_agent_money_transaction_app/Core/Components/navigation_bar.dart';
 
 class TransferPage extends StatefulWidget {
   const TransferPage({super.key});
@@ -9,17 +8,12 @@ class TransferPage extends StatefulWidget {
 }
 
 class _TransferPageState extends State<TransferPage> {
-  int _selectedIndex = 1; // Transfer tab selected by default
   String? _fromProvider = 'HaloPesa';
   String? _toProvider = 'Airtel Money';
-  final TextEditingController _amountController = TextEditingController(text: '393292');
+  final TextEditingController _amountController = TextEditingController(
+    text: '393292',
+  );
   final List<String> _providers = ['HaloPesa', 'Airtel Money'];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
 
   List<String> _getAvailableToProviders() {
     return _providers.where((provider) => provider != _fromProvider).toList();
@@ -31,7 +25,8 @@ class _TransferPageState extends State<TransferPage> {
 
     // Ensure _toProvider is valid based on the available options
     if (!availableToProviders.contains(_toProvider)) {
-      _toProvider = availableToProviders.isNotEmpty ? availableToProviders[0] : null;
+      _toProvider =
+          availableToProviders.isNotEmpty ? availableToProviders[0] : null;
     }
 
     return Scaffold(
@@ -62,10 +57,16 @@ class _TransferPageState extends State<TransferPage> {
                       children: [
                         CircleAvatar(
                           radius: 12,
-                          backgroundColor: _fromProvider == 'HaloPesa' ? Colors.green[100] : Colors.red[100],
+                          backgroundColor:
+                              _fromProvider == 'HaloPesa'
+                                  ? Colors.green[100]
+                                  : Colors.red[100],
                           child: CircleAvatar(
                             radius: 8,
-                            backgroundColor: _fromProvider == 'HaloPesa' ? Colors.green : Colors.red,
+                            backgroundColor:
+                                _fromProvider == 'HaloPesa'
+                                    ? Colors.green
+                                    : Colors.red,
                           ),
                         ),
                         SizedBox(width: 8),
@@ -74,12 +75,13 @@ class _TransferPageState extends State<TransferPage> {
                             value: _fromProvider,
                             isExpanded: true,
                             underline: SizedBox(),
-                            items: _providers.map((String provider) {
-                              return DropdownMenuItem<String>(
-                                value: provider,
-                                child: Text(provider),
-                              );
-                            }).toList(),
+                            items:
+                                _providers.map((String provider) {
+                                  return DropdownMenuItem<String>(
+                                    value: provider,
+                                    child: Text(provider),
+                                  );
+                                }).toList(),
                             onChanged: (String? newValue) {
                               setState(() {
                                 _fromProvider = newValue;
@@ -120,10 +122,14 @@ class _TransferPageState extends State<TransferPage> {
                 children: [
                   CircleAvatar(
                     radius: 12,
-                    backgroundColor: _toProvider == 'HaloPesa' ? Colors.green[100] : Colors.red[100],
+                    backgroundColor:
+                        _toProvider == 'HaloPesa'
+                            ? Colors.green[100]
+                            : Colors.red[100],
                     child: CircleAvatar(
                       radius: 8,
-                      backgroundColor: _toProvider == 'HaloPesa' ? Colors.green : Colors.red,
+                      backgroundColor:
+                          _toProvider == 'HaloPesa' ? Colors.green : Colors.red,
                     ),
                   ),
                   SizedBox(width: 8),
@@ -132,12 +138,13 @@ class _TransferPageState extends State<TransferPage> {
                       value: _toProvider,
                       isExpanded: true,
                       underline: SizedBox(),
-                      items: availableToProviders.map((String provider) {
-                        return DropdownMenuItem<String>(
-                          value: provider,
-                          child: Text(provider),
-                        );
-                      }).toList(),
+                      items:
+                          availableToProviders.map((String provider) {
+                            return DropdownMenuItem<String>(
+                              value: provider,
+                              child: Text(provider),
+                            );
+                          }).toList(),
                       onChanged: (String? newValue) {
                         setState(() {
                           _toProvider = newValue;
@@ -193,7 +200,6 @@ class _TransferPageState extends State<TransferPage> {
           ],
         ),
       ),
-      
     );
   }
 }

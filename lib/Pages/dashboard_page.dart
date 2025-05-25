@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:inter_agent_money_transaction_app/Core/Components/navigation_bar.dart';
 import 'package:inter_agent_money_transaction_app/Core/Components/provider_card.dart';
 import 'package:inter_agent_money_transaction_app/Core/Components/transaction_card.dart';
 
@@ -11,13 +10,6 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
-  int _selectedIndex = 0;
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {

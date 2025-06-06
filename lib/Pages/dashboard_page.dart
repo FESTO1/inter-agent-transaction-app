@@ -30,39 +30,39 @@ class _DashboardPageState extends State<DashboardPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               // Agent ID Section
-              Container(
-                padding: EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Agent ID', style: TextStyle(color: Colors.grey)),
-                        SizedBox(height: 4),
-                        Text('AG1234',
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold)),
-                      ],
-                    ),
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.green,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                      ),
-                      child: Text('Verify', style: TextStyle(color: Colors.white)),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(height: 16),
+              // Container(
+              //   padding: EdgeInsets.all(16),
+              //   decoration: BoxDecoration(
+              //     color: Colors.white,
+              //     borderRadius: BorderRadius.circular(10),
+              //   ),
+              //   child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //     children: [
+              //       Column(
+              //         crossAxisAlignment: CrossAxisAlignment.start,
+              //         children: [
+              //           Text('Agent ID', style: TextStyle(color: Colors.grey)),
+              //           SizedBox(height: 4),
+              //           Text('AG1234',
+              //               style: TextStyle(
+              //                   fontSize: 18, fontWeight: FontWeight.bold)),
+              //         ],
+              //       ),
+              //       ElevatedButton(
+              //         onPressed: () {},
+              //         style: ElevatedButton.styleFrom(
+              //           backgroundColor: Colors.green,
+              //           shape: RoundedRectangleBorder(
+              //             borderRadius: BorderRadius.circular(8),
+              //           ),
+              //         ),
+              //         child: Text('Verify', style: TextStyle(color: Colors.white)),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+              // SizedBox(height: 16),
               // Your Balances Section
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

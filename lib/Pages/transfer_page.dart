@@ -93,17 +93,20 @@ class _TransferPageState extends State<TransferPage> {
                     ),
                   ),
                 ),
-                SizedBox(width: 16),
-                Container(
-                  padding: EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.grey[200],
-                  ),
-                  child: Icon(Icons.arrow_forward, color: Colors.blue[900]),
-                ),
+               
               ],
             ),
+             SizedBox(height: 16),
+                Center(
+                  child: Container(
+                    padding: EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.grey[200],
+                    ),
+                    child: Icon(Icons.arrow_forward, color: Colors.blue[900]),
+                  ),
+                ),
             SizedBox(height: 16),
             // To Provider Section
             Text(

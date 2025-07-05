@@ -84,12 +84,12 @@ class ProfilePage extends StatelessWidget {
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 8),
-            _buildSettingOption(
-              'Super Agent Dashboard',
-              Icons.shield,
-              Colors.blue[100]!,
-              () {},
-            ),
+            // _buildSettingOption(
+            //   'Super Agent Dashboard',
+            //   Icons.shield,
+            //   Colors.blue[100]!,
+            //   () {},
+            // ),
             _buildSettingOption(
               'Logout',
               Icons.logout,

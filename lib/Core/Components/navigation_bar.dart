@@ -4,7 +4,7 @@ class NavigationBarWidget extends StatelessWidget {
   final int selectedIndex;
   final Function(int) onItemTapped;
 
-  NavigationBarWidget({
+  const NavigationBarWidget({super.key, 
     required this.selectedIndex,
     required this.onItemTapped,
   });

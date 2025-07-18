@@ -4,10 +4,10 @@ class TransferPage extends StatefulWidget {
   const TransferPage({super.key});
 
   @override
-  _TransferPageState createState() => _TransferPageState();
+  TransferPageState createState() => TransferPageState();
 }
 
-class _TransferPageState extends State<TransferPage> {
+class TransferPageState extends State<TransferPage> {
   String? _fromProvider = 'HaloPesa';
   String? _toProvider = 'Airtel Money';
   final TextEditingController _amountController = TextEditingController(

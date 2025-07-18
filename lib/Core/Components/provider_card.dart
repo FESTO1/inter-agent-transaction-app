@@ -1,11 +1,23 @@
 import 'package:flutter/material.dart';
 
+extension ColorOpacity on Color {
+  Color withOpacityValue(double opacity) {
+    return Color.fromARGB(
+      (opacity * 255).toInt(), // alpha
+      (r * 255.0).round() & 0xff, // red
+      (g * 255.0).round() & 0xff, // green
+      (b * 255.0).round() & 0xff, // blue
+    );
+  }
+}
+
+// ...rest of your code...
 class ProviderCard extends StatelessWidget {
   final String name;
   final String amount;
   final Color indicatorColor;
 
-  const ProviderCard({
+  const ProviderCard({super.key, 
     required this.name,
     required this.amount,
     required this.indicatorColor,
@@ -33,7 +45,7 @@ class ProviderCard extends StatelessWidget {
           ),
           CircleAvatar(
             radius: 12,
-            backgroundColor: indicatorColor.withOpacity(0.2),
+            backgroundColor: indicatorColor.withOpacityValue(0.2),
             child: CircleAvatar(
               radius: 8,
               backgroundColor: indicatorColor,

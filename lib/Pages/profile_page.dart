@@ -111,20 +111,25 @@ class ProfilePage extends StatelessWidget {
     );
   }
 
-  Widget _buildAgentNumber(String provider, String number, Color color) {
-    return ListTile(
-      leading: CircleAvatar(
-        radius: 12,
-        backgroundColor: color.withOpacity(0.2),
-        child: CircleAvatar(
-          radius: 8,
-          backgroundColor: color,
-        ),
+Widget _buildAgentNumber(String provider, String number, Color color) {
+  return ListTile(
+    leading: CircleAvatar(
+      radius: 12,
+      backgroundColor: Color.fromARGB(
+        (0.2 * 255).toInt(),
+        (color.r * 255.0).round() & 0xff,
+        (color.g * 255.0).round() & 0xff,
+        (color.b * 255.0).round() & 0xff,
       ),
-      title: Text(provider),
-      trailing: Text(number, style: TextStyle(color: Colors.blue[900])),
-    );
-  }
+      child: CircleAvatar(
+        radius: 8,
+        backgroundColor: color,
+      ),
+    ),
+    title: Text(provider),
+    trailing: Text(number, style: TextStyle(color: Colors.blue[900])),
+  );
+}
 
   Widget _buildSettingOption(String title, IconData icon, Color color, VoidCallback onTap) {
     return ListTile(
